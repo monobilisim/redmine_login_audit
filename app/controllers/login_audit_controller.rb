@@ -2,7 +2,6 @@
 # Copyright (C) 2018 Martin Denizet <martin.denizet@supinfo.com>
 #
 class LoginAuditController < AdminController
-  unloadable
   layout 'admin'
 
   before_action :require_admin

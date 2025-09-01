@@ -7,7 +7,6 @@ module RedmineLoginAudit
       base.send(:include, InstanceMethods)
 
       base.class_eval do
-        unloadable
 
         alias_method :user_setup_without_login_audit, :user_setup
         alias_method :user_setup, :user_setup_with_login_audit

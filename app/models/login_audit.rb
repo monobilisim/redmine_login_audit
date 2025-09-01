@@ -2,7 +2,6 @@
 # Copyright (C) 2018 Martin Denizet <martin.denizet@supinfo.com>
 #
 class LoginAudit < ActiveRecord::Base
-  unloadable
 
   #validates :user_id, :presence => true
 
@@ -13,7 +12,6 @@ class LoginAudit < ActiveRecord::Base
 
   belongs_to :user
 
-  attr_accessible :user, :ip_address, :success, :login, :api, :url, :method
 
   API_FORMAT = 'json'
 
@@ -34,12 +32,14 @@ class LoginAudit < ActiveRecord::Base
     id = user.nil? ? 'N/A' : user.id
     api = request.format === API_FORMAT
     # Setting.plugin_redmine_login_audit['audit_api']
-    la = LoginAudit.new(
-        :user => user,
-        :ip_address => request.remote_ip,
-        :success => success,
-        #:client => request.media_type,
-        :login => login,
+  # Get real client IP using helper
+  ip = LoginAuditHelper.instance_method(:real_client_ip).bind(self).call(request)
+  la = LoginAudit.new(
+    :user => user,
+    :ip_address => ip,
+    :success => success,
+    #:client => request.media_type,
+    :login => login,
         :api => api,
         :url => request.fullpath,
         :method => request.request_method
