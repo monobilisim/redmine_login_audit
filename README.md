@@ -1,6 +1,6 @@
 # Redmine Login Audit
 
-This is a Redmine 4.0 compatible fork of https://github.com/martin-denizet/redmine_login_audit.
+This is a Redmine 6.0 compatible fork of [martin-denizet/redmine_login_audit](https://github.com/martin-denizet/redmine_login_audit).
 
 ## Features
 
@@ -20,6 +20,7 @@ This is a Redmine 4.0 compatible fork of https://github.com/martin-denizet/redmi
 ## Compatibility
 
 Tested working with Ruby 2.2.3 on:
+* Redmine 6.0.x
 * Redmine 4.0.x
 * Redmine 3.4.x
 * Redmine 3.2.x
@@ -73,9 +74,10 @@ Note that enabling API authentication logging will potentially create MASSIVE am
 * Marco Senn: Support
 * Thorsten Jaeger: Support
 * Erdem Olcay: Redmine 4.0 compatibility
+* Ömer Taha Öztop: Redmine 6.0 compatibility
 
 
-Uses "Silk icon" by Mark James at http://www.famfamfam.com/ licensed under "Creative Commons Attribution 2.5 License"
+Uses "Silk icon" by Mark James at [famfamfam.com](http://www.famfamfam.com/) licensed under "Creative Commons Attribution 2.5 License"
 Uses WiceGrid gem by Yuri Leikind licensed under "MIT License"
 
 ## How to contribute
@@ -111,5 +113,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-

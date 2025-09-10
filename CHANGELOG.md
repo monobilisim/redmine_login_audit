@@ -1,4 +1,12 @@
-#CHANGELOG
+# CHANGELOG
+
+<!-- markdownlint-disable MD024 -->
+
+## [0.3.4] - 2025-09-10
+
+### Added
+
+- Redmine 6.0: Documented compatibility in README
 
 ## [0.3.3] - 2018-04-11 **Migration required**
 

@@ -3,6 +3,15 @@
 #
 module LoginAuditHelper
 
+  # Returns the real client IP address, prioritizing X-Forwarded-For if present
+  def real_client_ip(request)
+    xff = request.headers['X-Forwarded-For']
+    if xff.present?
+      return xff.split(',').first.strip
+    end
+    request.remote_ip
+  end
+
   def choices_for_purge
     my_array = []
     12.times do |i|

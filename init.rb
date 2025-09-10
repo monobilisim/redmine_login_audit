@@ -1,8 +1,9 @@
 #
 # Copyright (C) 2018 Martin Denizet <martin.denizet@supinfo.com>
 #
-require_dependency 'redmine_login_audit/application_controller_patch'
-require_dependency 'redmine_login_audit/account_controller_patch'
+require 'kaminari/activerecord'
+require File.expand_path('lib/redmine_login_audit/application_controller_patch', __dir__)
+require File.expand_path('lib/redmine_login_audit/account_controller_patch', __dir__)
 
 Rails.application.config.assets.precompile += %w( wice_grid.js )
 
@@ -33,7 +34,7 @@ Redmine::Plugin.register :redmine_login_audit do
   name 'Redmine Login Audit plugin'
   author 'Martin DENIZET'
   description 'Login Audit logs login attempts. Can be configured to send emails'
-  version '0.3.3'
+  version '0.3.4'
   url 'https://github.com/martin-denizet/redmine_login_audit'
   author_url 'http://martin-denizet.com'
 
