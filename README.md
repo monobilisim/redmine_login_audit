@@ -74,6 +74,7 @@ Note that enabling API authentication logging will potentially create MASSIVE am
 * Marco Senn: Support
 * Thorsten Jaeger: Support
 * Erdem Olcay: Redmine 4.0 compatibility
+* Ömer Taha Öztop: Redmine 6.0 compatibility
 
 
 Uses "Silk icon" by Mark James at [famfamfam.com](http://www.famfamfam.com/) licensed under "Creative Commons Attribution 2.5 License"
